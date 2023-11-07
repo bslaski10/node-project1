@@ -1,6 +1,6 @@
 const getSport = async () => {
     try {
-      return (await fetch("https://node-project1.onrender.com/api/sports")).json();
+      return (await fetch("/api/sports")).json();
     } catch (error) {
       console.log("error");
     }
@@ -25,7 +25,7 @@ const getSport = async () => {
       section.appendChild(h2);
   
       let img = document.createElement("img");
-      img.src = "https://node-project1.onrender.com/" + sports.img;
+      img.src = sports.img;
       section.appendChild(img);
   
       let players = document.createElement("p");
